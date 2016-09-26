@@ -1,0 +1,337 @@
+FORMAT: 1A
+HOST: http://api.staging.delivers.io
+
+# Core API V1.0
+
+## Introduction
+The Delivers.IO API is organized around REST. Our API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which are understood by off-the-shelf HTTP clients.
+
+We support cross-origin resource sharing, allowing you to interact securely with our API from a client-side web application (though you should never expose your secret API key in any public website's client-side code). JSON is returned by all API responses, including errors, although our API libraries convert responses to appropriate language-specific objects.
+
+To make the API as explorable as possible, accounts have test mode and live mode API keys. There is no "switch" for changing between modes, just use the appropriate key to perform a live or test transaction.
+
+## Authentication
+Authenticate your account when using the API by including your secret API key in the request. You can manage your API keys in the Dashboard. Your API keys carry many privileges, so be sure to keep them secret! Do not share your secret API keys in publicly accessible areas such GitHub, client-side code, and so forth.
+
+Authentication to the API is performed via HTTP Basic Auth. Provide your API key as the basic auth username value. You do not need to provide a password.
+
+If you need to authenticate via bearer auth (e.g., for a cross-origin request), use `-H "Authorization: Bearer test_BQokikJOvBiI2HlWgH4olfQ2"` instead of `-u test_BQokikJOvBiI2HlWgH4olfQ2:`.
+
+All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail.
+
+## Group Deliveries
+
+### List all deliveries [GET /deliveries]
+Returns all active deliveries.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+    + Attributes (array[Delivery])
+
+### Create a delivery [POST /deliveries]
+Creates delivery.
+
++ Request (application/json)
+    + Attributes
+      + Include Delivery
+      + customer_id: `bc59e4f6-2fba-46ad-a71e-2535b4899061` (string)
+
++ Response 200 (application/json)
+    + Attributes
+      + id: `19be888c-b731-4348-99f5-9bec1fc5a5ec` (string)
+      + Include Delivery
+
++ Response 422 (application/json)
+    + Attributes (UnprocessableEntityError)
+
+### Retrieve a delivery [GET /deliveries/{id}]
+Returns delivery.
+
++ Parameters
+  + id: `19be888c-b731-4348-99f5-9bec1fc5a5ec` (string)
+
++ Response 200 (application/json)
+    + Attributes
+      + id: `19be888c-b731-4348-99f5-9bec1fc5a5ec` (string)
+      + Include Delivery
+
++ Response 404 (application/json)
+    + Attributes (NotFoundError)
+
+## Group Jobs
+
+### List all jobs [GET /deliveries]
+Returns all active jobs.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+    + Attributes (array[Delivery])
+
+### Retrieve a job [GET /jobs/{id}]
+Returns Job.
+
++ Parameters
+  + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+
++ Response 200 (application/json)
+    + Attributes
+      + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+      + Include Job
+
+### Start a job [POST /jobs/{id}/start]
+Driver starts a job.
+
++ Parameters
+    + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+
++ Request (application/json)
+    + Attributes
+      + driver_id: `45860a5e-16da-4a78-b192-f024907484d2` (string)
+
++ Response 200 (application/json)
+    + Attributes
+      + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+      + Include Job
+
++ Response 422 (application/json)
+    + Attributes (UnprocessableEntityError)
+
+### Cancel a job [POST /jobs/{id}/cancel]
+Driver cancels a job.
+
++ Parameters
+    + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+
++ Request (application/json)
+    + Attributes
+      + reason (CancelReason)
+      + comment: `Customer did not answer` (string)
+
++ Response 200 (application/json)
+    + Attributes
+      + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+      + Include Job
+
++ Response 422 (application/json)
+    + Attributes (UnprocessableEntityError)
+
+### Complete a job [POST /jobs/{id}/complete]
+Driver completes a job.
+
++ Parameters
+    + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+
++ Request (application/json)
+    + Attributes
+      + reason: `Customer did not answer` (string)
+
++ Response 200 (application/json)
+    + Attributes
+      + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+      + Include Job
+
++ Response 422 (application/json)
+    + Attributes (UnprocessableEntityError)
+
+### Sign a job [POST /jobs/{id}/sign]
+Driver signs a job.
+
++ Parameters
+    + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+
++ Request (application/json)
+    + Attributes
+      + signature_file (object)
+        + data: `base64:image/png...` (string)
+
++ Response 200 (application/json)
+    + Attributes
+      + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+      + Include Job
+
++ Response 422 (application/json)
+    + Attributes (UnprocessableEntityError)
+
+## Group Photos
+
+### Add a photo to a job [POST /jobs/{job_id}/photos]
+Driver adds a photo to a job.
+
++ Parameters
+    + job_id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+
++ Request (application/json)
+    + Attributes
+      + photo (object)
+        + data: `base64:image/png...` (string)
+
++ Response 200 (application/json)
+    + Attributes
+      + Include Photo
+
++ Response 422 (application/json)
+    + Attributes (UnprocessableEntityError)
+
+### List all photos [GET /jobs/{job_id}/photos]
+Returns a list of job's photos.
+
++ Parameters
+    + job_id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+
++ Response 200 (application/json)
+    + Attributes (array[Photo])
+
++ Response 422 (application/json)
+    + Attributes (UnprocessableEntityError)
+
+## Group Comments
+
+### List all comments [GET /jobs/{job_id}/comments]
+Returns a list of job's comments.
+
++ Parameters
+    + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+
++ Response 200 (application/json)
+    + Attributes (array[Comment])
+
++ Response 422 (application/json)
+    + Attributes (UnprocessableEntityError)
+
+### Add a comment to a job [POST /jobs/{job_id}/comments]
+Driver adds a comment to a job.
+
++ Parameters
+    + job_id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+
++ Request (application/json)
+    + Attributes (Comment)
+
++ Response 200 (application/json)
+    + Attributes
+      + id: `fb4c54ff-60a6-4b76-9cce-7b279152a7b5` (string)
+      + Include Comment
+
++ Response 422 (application/json)
+    + Attributes (UnprocessableEntityError)
+
+## Group Drivers
+
+### List all drivers [GET /drivers]
+Returns all available deliveries.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+    + Attributes (array[Driver])
+
+### Invite a driver [POST /drivers]
+Creates driver.
+
++ Request (application/json)
+    + Attributes
+      + Include User
+
++ Response 200 (application/json)
+    + Attributes (Driver)
+
++ Response 422 (application/json)
+    + Attributes (UnprocessableEntityError)
+
+### Retrieve a driver [GET /drivers/{id}]
+Returns a driver.
+
++ Parameters
+  + id: `19be888c-b731-4348-99f5-9bec1fc5a5ec` (string)
+
++ Response 200 (application/json)
+    + Attributes (Driver)
+
++ Response 404 (application/json)
+    + Attributes (NotFoundError)
+
+# Data Structures
+
+## Delivery
++ pickup_at: `2016-01-01T18:00Z` (string, nullable)
++ deliver_at: `2016-01-01T18:00Z` (string)
++ instructions: `Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are. I have a gun.` (string)
++ route (Route)
++ order (Order)
+
+## Route
++ destination (RoutePoint)
++ pickup (RoutePoint)
+
+## RoutePoint
++ coordinates: 55.449667, 73.804010 (array)
++ address: `1239 Bartoletti Fords Suite 239` (string)
+
+## Order
++ items (OrderItem) - List of items to be delivered
++ purchased: `true` (boolean) - Client has already paid
++ payment: `true` (boolean) - Client have to pay directly to the driver
+
+## OrderItem
++ title: `iPhone 7, 64GB, black` (string) - Item description
++ price: `1100` (number) - Price
+
+## Job
++ delivery (Delivery)
++ driver (Driver)
++ customer (Customer)
++ manager (Manager)
++ signature_file (SignatureFile)
++ photos (array[Photo])
++ started_at: `2016-01-01T15:01:23Z`
++ cancelled_at: `2016-01-01T15:01:23Z`
++ completed_at: `2016-01-01T15:01:23Z`
++ signed_at: `2016-01-01T15:01:23Z`
++ reason_cancel: `Customer did not answer` (string)
+
+## SignatureFile
++ filename: `j_f2b337f8-55db-40f9-b052-ce8210cac868.png` (string)
++ url: `https://cdn.delivers.io/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png` (string)
++ created_at: `2016-01-01T15:01:23Z` (string)
+
+## CancelReason (enum)
+- driver_fault
+- customer_fault
+- customer_cancel
+
+## Photo
++ filename: `j_f2b337f8-55db-40f9-b052-ce8210cac868.png` (string)
++ url: `https://cdn.delivers.io/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png` (string)
++ created_at: `2016-01-01T15:01:23Z` (string)
+
+## User
++ email: `user@example.com` (string)
++ phone: `470.408.0187` (string)
++ first_name: `Hoyt` (string)
++ last_name: `Grimes` (string)
+
+## Driver
++ id: `45860a5e-16da-4a78-b192-f024907484d2` (string)
++ Include User
+
+## Manager
++ id: `04b4db1e-dd13-4395-8f1f-b1ea8cbba79a` (string)
++ Include User
+
+## Customer
++ id: `bc59e4f6-2fba-46ad-a71e-2535b4899061` (string)
++ Include User
+
+## Comment
++ text: `I'm on my way. Can be a bit late because of traffic jams` (string)
++ author (User)
+
+## NotFoundError
++ error: `Not Found` (string)
+
+## UnprocessableEntityError
++ errors (object)
+  + base: `Some basic error happened` (array, optional)
+  + field: `Some field is invalid` (array, optional)

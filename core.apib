@@ -19,9 +19,11 @@ If you need to authenticate via bearer auth (e.g., for a cross-origin request), 
 
 All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail.
 
-## Group Deliveries
+# Group Deliveries
 
-### List all deliveries [GET /deliveries]
+## /deliveries
+
+## List all Deliveries [GET]
 Returns all active deliveries.
 
 + Request (application/json)
@@ -29,8 +31,8 @@ Returns all active deliveries.
 + Response 200 (application/json)
     + Attributes (array[Delivery])
 
-### Create a delivery [POST /deliveries]
-Creates delivery.
+## Create Delivery [POST]
+Creates a delivery.
 
 + Request (application/json)
     + Attributes
@@ -45,7 +47,7 @@ Creates delivery.
 + Response 422 (application/json)
     + Attributes (UnprocessableEntityError)
 
-### Retrieve a delivery [GET /deliveries/{id}]
+## Retrieve a delivery [GET /deliveries/{id}]
 Returns delivery.
 
 + Parameters
@@ -61,7 +63,9 @@ Returns delivery.
 
 ## Group Jobs
 
-### List all jobs [GET /deliveries]
+### /jobs
+
+### List all jobs [GET]
 Returns all active jobs.
 
 + Request (application/json)
@@ -69,7 +73,9 @@ Returns all active jobs.
 + Response 200 (application/json)
     + Attributes (array[Delivery])
 
-### Retrieve a job [GET /jobs/{id}]
+### /jobs/{id}
+
+### Retrieve a job [GET]
 Returns Job.
 
 + Parameters
@@ -80,7 +86,9 @@ Returns Job.
       + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
       + Include Job
 
-### Start a job [POST /jobs/{id}/start]
+### /jobs/{id}/start
+
+### Start a job [POST]
 Driver starts a job.
 
 + Parameters
@@ -98,7 +106,9 @@ Driver starts a job.
 + Response 422 (application/json)
     + Attributes (UnprocessableEntityError)
 
-### Cancel a job [POST /jobs/{id}/cancel]
+### /jobs/{id}/cancel
+
+### Cancel a job [POST]
 Driver cancels a job.
 
 + Parameters
@@ -117,7 +127,9 @@ Driver cancels a job.
 + Response 422 (application/json)
     + Attributes (UnprocessableEntityError)
 
-### Complete a job [POST /jobs/{id}/complete]
+### /jobs/{id}/complete
+
+### Complete a job [POST]
 Driver completes a job.
 
 + Parameters
@@ -135,7 +147,9 @@ Driver completes a job.
 + Response 422 (application/json)
     + Attributes (UnprocessableEntityError)
 
-### Sign a job [POST /jobs/{id}/sign]
+### /jobs/{id}/sign
+
+### Sign a job [POST]
 Driver signs a job.
 
 + Parameters
@@ -156,7 +170,9 @@ Driver signs a job.
 
 ## Group Photos
 
-### Add a photo to a job [POST /jobs/{job_id}/photos]
+### /jobs/{job_id}/photos
+
+### Add a photo to a job [POST]
 Driver adds a photo to a job.
 
 + Parameters
@@ -174,7 +190,7 @@ Driver adds a photo to a job.
 + Response 422 (application/json)
     + Attributes (UnprocessableEntityError)
 
-### List all photos [GET /jobs/{job_id}/photos]
+### List all photos [GET]
 Returns a list of job's photos.
 
 + Parameters
@@ -188,7 +204,9 @@ Returns a list of job's photos.
 
 ## Group Comments
 
-### List all comments [GET /jobs/{job_id}/comments]
+### /jobs/{job_id}/comments
+
+### List all comments [GET]
 Returns a list of job's comments.
 
 + Parameters
@@ -200,7 +218,7 @@ Returns a list of job's comments.
 + Response 422 (application/json)
     + Attributes (UnprocessableEntityError)
 
-### Add a comment to a job [POST /jobs/{job_id}/comments]
+### Add a comment to a job [POST]
 Driver adds a comment to a job.
 
 + Parameters
@@ -219,16 +237,19 @@ Driver adds a comment to a job.
 
 ## Group Drivers
 
-### List all drivers [GET /drivers]
-Returns all available deliveries.
+### /drivers
+
+### List all drivers [GET]
+Returns all available drivers.
+"Available" means a driver signed up and uses mobile app despite the current status: online or offline.
 
 + Request (application/json)
 
 + Response 200 (application/json)
     + Attributes (array[Driver])
 
-### Invite a driver [POST /drivers]
-Creates driver.
+### Invite a driver [POST]
+Creates a driver.
 
 + Request (application/json)
     + Attributes
@@ -240,7 +261,9 @@ Creates driver.
 + Response 422 (application/json)
     + Attributes (UnprocessableEntityError)
 
-### Retrieve a driver [GET /drivers/{id}]
+### /drivers/{id}
+
+### Retrieve a driver [GET]
 Returns a driver.
 
 + Parameters
@@ -266,7 +289,7 @@ Returns a driver.
 + pickup (RoutePoint)
 
 ## RoutePoint
-+ coordinates: 55.449667, 73.804010 (array)
++ coordinates (Coordinates)
 + address: `1239 Bartoletti Fords Suite 239` (string)
 
 ## Order
@@ -315,6 +338,8 @@ Returns a driver.
 ## Driver
 + id: `45860a5e-16da-4a78-b192-f024907484d2` (string)
 + Include User
++ coordinates (Coordinates)
++ status: `online` (DriverStatus)
 
 ## Manager
 + id: `04b4db1e-dd13-4395-8f1f-b1ea8cbba79a` (string)
@@ -327,6 +352,14 @@ Returns a driver.
 ## Comment
 + text: `I'm on my way. Can be a bit late because of traffic jams` (string)
 + author (User)
+
+## Coordinates
++ latitude: 55.449667 (number)
++ longitude: 73.804010 (number)
+
+## DriverStatus (enum)
+- online
+- offline
 
 ## NotFoundError
 + error: `Not Found` (string)

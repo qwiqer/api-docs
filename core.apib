@@ -1,10 +1,10 @@
 FORMAT: 1A
-HOST: http://api.staging.delivers.io
+HOST: http://api.staging.qwiqer.com
 
 # Core API V1.0
 
 ## Introduction
-The Delivers.IO API is organized around REST. Our API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which are understood by off-the-shelf HTTP clients.
+The Qwiqer API is organized around REST. Our API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which are understood by off-the-shelf HTTP clients.
 
 We support cross-origin resource sharing, allowing you to interact securely with our API from a client-side web application (though you should never expose your secret API key in any public website's client-side code). JSON is returned by all API responses, including errors, although our API libraries convert responses to appropriate language-specific objects.
 
@@ -21,9 +21,9 @@ All API requests must be made over HTTPS. Calls made over plain HTTP will fail. 
 
 # Group Deliveries
 
-## /deliveries
+## Collection [/deliveries]
 
-## List all Deliveries [GET]
+### Retrieve all Deliveries [GET]
 Returns all active deliveries.
 
 + Request (application/json)
@@ -31,7 +31,7 @@ Returns all active deliveries.
 + Response 200 (application/json)
     + Attributes (array[Delivery])
 
-## Create Delivery [POST]
+### Create Delivery [POST]
 Creates a delivery.
 
 + Request (application/json)
@@ -47,7 +47,9 @@ Creates a delivery.
 + Response 422 (application/json)
     + Attributes (UnprocessableEntityError)
 
-## Retrieve a delivery [GET /deliveries/{id}]
+## Delivery [/deliveries/{id}]
+
+### Retrieve a delivery [GET]
 Returns delivery.
 
 + Parameters
@@ -61,11 +63,25 @@ Returns delivery.
 + Response 404 (application/json)
     + Attributes (NotFoundError)
 
-## Group Jobs
+### Update a delivery [PUT]
+Updates a delivery.
 
-### /jobs
++ Parameters
+  + id: `19be888c-b731-4348-99f5-9bec1fc5a5ec` (string)
 
-### List all jobs [GET]
++ Response 200 (application/json)
+    + Attributes
+      + id: `19be888c-b731-4348-99f5-9bec1fc5a5ec` (string)
+      + Include Delivery
+
++ Response 404 (application/json)
+    + Attributes (NotFoundError)
+
+# Group Jobs
+
+## Collection [/jobs]
+
+### Retrieve all Jobs [GET]
 Returns all active jobs.
 
 + Request (application/json)
@@ -73,7 +89,7 @@ Returns all active jobs.
 + Response 200 (application/json)
     + Attributes (array[Delivery])
 
-### /jobs/{id}
+## Job [/jobs/{id}]
 
 ### Retrieve a job [GET]
 Returns Job.
@@ -86,7 +102,7 @@ Returns Job.
       + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
       + Include Job
 
-### /jobs/{id}/start
+## /jobs/{id}/start
 
 ### Start a job [POST]
 Driver starts a job.
@@ -106,7 +122,7 @@ Driver starts a job.
 + Response 422 (application/json)
     + Attributes (UnprocessableEntityError)
 
-### /jobs/{id}/cancel
+## /jobs/{id}/cancel
 
 ### Cancel a job [POST]
 Driver cancels a job.
@@ -127,7 +143,7 @@ Driver cancels a job.
 + Response 422 (application/json)
     + Attributes (UnprocessableEntityError)
 
-### /jobs/{id}/complete
+## /jobs/{id}/complete
 
 ### Complete a job [POST]
 Driver completes a job.
@@ -147,7 +163,7 @@ Driver completes a job.
 + Response 422 (application/json)
     + Attributes (UnprocessableEntityError)
 
-### /jobs/{id}/sign
+## /jobs/{id}/sign
 
 ### Sign a job [POST]
 Driver signs a job.
@@ -168,9 +184,9 @@ Driver signs a job.
 + Response 422 (application/json)
     + Attributes (UnprocessableEntityError)
 
-## Group Photos
+# Group Photos
 
-### /jobs/{job_id}/photos
+## /jobs/{job_id}/photos
 
 ### Add a photo to a job [POST]
 Driver adds a photo to a job.
@@ -202,9 +218,9 @@ Returns a list of job's photos.
 + Response 422 (application/json)
     + Attributes (UnprocessableEntityError)
 
-## Group Comments
+# Group Comments
 
-### /jobs/{job_id}/comments
+## /jobs/{job_id}/comments
 
 ### List all comments [GET]
 Returns a list of job's comments.
@@ -235,9 +251,9 @@ Driver adds a comment to a job.
 + Response 422 (application/json)
     + Attributes (UnprocessableEntityError)
 
-## Group Drivers
+# Group Drivers
 
-### /drivers
+## /drivers
 
 ### List all drivers [GET]
 Returns all available drivers.
@@ -261,7 +277,7 @@ Creates a driver.
 + Response 422 (application/json)
     + Attributes (UnprocessableEntityError)
 
-### /drivers/{id}
+## /drivers/{id}
 
 ### Retrieve a driver [GET]
 Returns a driver.
@@ -316,7 +332,7 @@ Returns a driver.
 
 ## SignatureFile
 + filename: `j_f2b337f8-55db-40f9-b052-ce8210cac868.png` (string)
-+ url: `https://cdn.delivers.io/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png` (string)
++ url: `https://cdn.qwiqer.com/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png` (string)
 + created_at: `2016-01-01T15:01:23Z` (string)
 
 ## CancelReason (enum)
@@ -326,7 +342,7 @@ Returns a driver.
 
 ## Photo
 + filename: `j_f2b337f8-55db-40f9-b052-ce8210cac868.png` (string)
-+ url: `https://cdn.delivers.io/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png` (string)
++ url: `https://cdn.qwiqer.com/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png` (string)
 + created_at: `2016-01-01T15:01:23Z` (string)
 
 ## User

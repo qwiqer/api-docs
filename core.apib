@@ -21,6 +21,22 @@ All API requests must be made over HTTPS. Calls made over plain HTTP will fail. 
 
 # Group Deliveries
 
+# Group Authenticate
+
+## Login a manager [POST /login]
+Authenticate manager
+
++ Attributes
+    + auth (object)
+        + email: `manager@example.com`
+        + password: `12345678`
+
++ Request (application/json)
+
++ Response 201 (application/json; charset=utf-8)
+    + Attributes (object)
+        + jwt (string)
+
 ## Collection [/deliveries]
 
 ### Retrieve all Deliveries [GET]

@@ -19,8 +19,6 @@ If you need to authenticate via bearer auth (e.g., for a cross-origin request), 
 
 All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail.
 
-# Group Deliveries
-
 # Group Authenticate
 
 ## Login a manager [POST /login]
@@ -36,6 +34,8 @@ Authenticate manager
 + Response 201 (application/json; charset=utf-8)
     + Attributes (object)
         + jwt (string)
+
+# Group Deliveries
 
 ## Collection [/deliveries]
 

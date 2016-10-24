@@ -21,19 +21,36 @@ All API requests must be made over HTTPS. Calls made over plain HTTP will fail. 
 
 # Group Authenticate
 
-## Login a manager [POST /login]
-Authenticate manager
+## Login [POST /login]
+Authenticate a user
 
-+ Attributes
-    + auth (object)
-        + email: `manager@example.com`
-        + password: `12345678`
-
-+ Request (application/json)
++ Request Manager login (application/json)
+    + Attributes
+        + auth (object)
+            + email: `manager@example.com`
+            + password: `defaultpassword`
 
 + Response 201 (application/json; charset=utf-8)
     + Attributes (object)
-        + jwt (string)
+        + jwt: `eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0NzYzNzg1NzIsInN1YiI6MX0.5MuPNzEz9EpbZlGTOPYB99lRqjj1PubmyqvmH8hYggI` (string)
+
++ Request Driver login (application/json)
+    + Attributes
+        + auth (object)
+            + email: `driver1@example.com`
+            + password: `defaultpassword`
+
++ Response 201 (application/json; charset=utf-8)
+    + Attributes (object)
+        + jwt: `eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0NzYzNzg1NzIsInN1YiI6MX0.5MuPNzEz9EpbZlGTOPYB99lRqjj1PubmyqvmH8hYggI` (string)
+
++ Request (application/json)
+    + Attributes
+        + auth (object)
+            + email: `not-a-user@example.com`
+            + password: `defaultpassword`
+
++ Response 404 (text/html)
 
 # Group Deliveries
 
@@ -44,7 +61,7 @@ Returns all active deliveries.
 
 + Request (application/json)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes (array[Delivery])
 
 ### Create Delivery [POST]
@@ -52,15 +69,16 @@ Creates a delivery.
 
 + Request (application/json)
     + Attributes
-      + Include Delivery
-      + customer_id: `bc59e4f6-2fba-46ad-a71e-2535b4899061` (string)
+      + delivery
+          + Include Delivery
+          + customer_id: `2` (string)
 
-+ Response 200 (application/json)
++ Response 201 (application/json; charset=utf-8)
     + Attributes
-      + id: `19be888c-b731-4348-99f5-9bec1fc5a5ec` (string)
+      + id: `1` (number)
       + Include Delivery
 
-+ Response 422 (application/json)
++ Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
 
 ## Delivery [/deliveries/{id}]
@@ -69,29 +87,44 @@ Creates a delivery.
 Returns delivery.
 
 + Parameters
-  + id: `19be888c-b731-4348-99f5-9bec1fc5a5ec` (string)
+  + id: `1` (string)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes
-      + id: `19be888c-b731-4348-99f5-9bec1fc5a5ec` (string)
+      + id: `1` (number)
       + Include Delivery
 
 + Response 404 (application/json)
     + Attributes (NotFoundError)
 
-### Update a delivery [PUT]
+### Pending - Update a delivery [PUT]
 Updates a delivery.
 
 + Parameters
-  + id: `19be888c-b731-4348-99f5-9bec1fc5a5ec` (string)
+  + id: `1` (string)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes
-      + id: `19be888c-b731-4348-99f5-9bec1fc5a5ec` (string)
+      + id: `1` (string)
       + Include Delivery
 
 + Response 404 (application/json)
     + Attributes (NotFoundError)
+
+### Pending - Delete a delivery [DELETE]
+Delete a delivery.
+
++ Parameters
+  + id: `1` (number)
+
++ Response 204
+
++ Response 404 (application/json)
+    + Attributes (NotFoundError)
+
++ Response 401 (application/json)
+    + Attributes (Unauthorized)
+
 
 # Group Jobs
 
@@ -101,9 +134,12 @@ Updates a delivery.
 Returns all active jobs.
 
 + Request (application/json)
+    + Headers
 
-+ Response 200 (application/json)
-    + Attributes (array[Delivery])
+            Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0NzYzNzg1NzIsInN1YiI6MX0.5MuPNzEz9EpbZlGTOPYB99lRqjj1PubmyqvmH8hYggI
+
++ Response 200 (application/json; charset=utf-8)
+    + Attributes (array[Job])
 
 ## Job [/jobs/{id}]
 
@@ -111,12 +147,32 @@ Returns all active jobs.
 Returns Job.
 
 + Parameters
-  + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+  + id: `1` (string)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes
-      + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+      + id: `1` (string)
       + Include Job
+
+## /jobs/{id}/accept
+
+### Accept a job [POST]
+Driver accepts a job.
+
++ Parameters
+    + id: `1` (number)
+
++ Request (application/json)
+    + Attributes
+      + driver_id: `3` (string)
+
++ Response 200 (application/json; charset=utf-8)
+    + Attributes
+      + id: `1` (number)
+      + Include Job
+
++ Response 422 (application/json; charset=utf-8)
+    + Attributes (UnprocessableEntityError)
 
 ## /jobs/{id}/start
 
@@ -124,18 +180,18 @@ Returns Job.
 Driver starts a job.
 
 + Parameters
-    + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+    + id: `1` (number)
 
 + Request (application/json)
     + Attributes
-      + driver_id: `45860a5e-16da-4a78-b192-f024907484d2` (string)
+      + driver_id: `3` (string)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes
-      + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+      + id: `1` (number)
       + Include Job
 
-+ Response 422 (application/json)
++ Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
 
 ## /jobs/{id}/cancel
@@ -144,19 +200,19 @@ Driver starts a job.
 Driver cancels a job.
 
 + Parameters
-    + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+    + id: `1` (number)
 
 + Request (application/json)
     + Attributes
-      + reason (CancelReason)
-      + comment: `Customer did not answer` (string)
+      + job (object)
+          + reason: `driver_fault` (string)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes
-      + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+      + id: `1` (number)
       + Include Job
 
-+ Response 422 (application/json)
++ Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
 
 ## /jobs/{id}/complete
@@ -165,143 +221,144 @@ Driver cancels a job.
 Driver completes a job.
 
 + Parameters
-    + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+    + id: `1` (number)
 
 + Request (application/json)
-    + Attributes
-      + reason: `Customer did not answer` (string)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes
-      + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+      + id: `1` (number)
       + Include Job
 
-+ Response 422 (application/json)
++ Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
 
 ## /jobs/{id}/sign
 
-### Sign a job [POST]
+### Pending - Sign a job [POST]
 Driver signs a job.
 
 + Parameters
-    + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+    + id: `1` (number)
 
 + Request (application/json)
     + Attributes
-      + signature_file (object)
-        + data: `base64:image/png...` (string)
+        + signature_file (object)
+            + data: `data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=` (string)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes
-      + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+      + id: `1` (number)
       + Include Job
 
-+ Response 422 (application/json)
++ Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
 
 # Group Photos
 
 ## /jobs/{job_id}/photos
 
-### Add a photo to a job [POST]
+### Pending - Add a photo to a job [POST]
 Driver adds a photo to a job.
 
 + Parameters
-    + job_id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+    + job_id: `1` (number)
 
 + Request (application/json)
     + Attributes
       + photo (object)
         + data: `base64:image/png...` (string)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes
       + Include Photo
 
-+ Response 422 (application/json)
++ Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
 
-### List all photos [GET]
+### Pending - List all photos [GET]
 Returns a list of job's photos.
 
 + Parameters
-    + job_id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+    + job_id: `1` (number)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes (array[Photo])
 
-+ Response 422 (application/json)
++ Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
 
 # Group Comments
 
 ## /jobs/{job_id}/comments
 
-### List all comments [GET]
+### Pending - List all comments [GET]
 Returns a list of job's comments.
 
 + Parameters
-    + id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+    + job_id: `1` (number)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes (array[Comment])
 
-+ Response 422 (application/json)
++ Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
 
-### Add a comment to a job [POST]
+### Pending - Add a comment to a job [POST]
 Driver adds a comment to a job.
 
 + Parameters
-    + job_id: `0fb13562-9faa-4370-be19-c6c6be59ff43` (string)
+    + job_id: `1` (number)
 
 + Request (application/json)
     + Attributes (Comment)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes
-      + id: `fb4c54ff-60a6-4b76-9cce-7b279152a7b5` (string)
+      + id: `1` (number)
       + Include Comment
 
-+ Response 422 (application/json)
++ Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
 
 # Group Drivers
 
-## /drivers
+## Collection [/drivers]
 
 ### List all drivers [GET]
 Returns all available drivers.
 "Available" means a driver signed up and uses mobile app despite the current status: online or offline.
 
 + Request (application/json)
+    + Headers
 
-+ Response 200 (application/json)
+            Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0NzYzNzg1NzIsInN1YiI6MX0.5MuPNzEz9EpbZlGTOPYB99lRqjj1PubmyqvmH8hYggI
+
++ Response 200 (application/json; charset=utf-8)
     + Attributes (array[Driver])
 
-### Invite a driver [POST]
+### Pending - Invite a driver [POST]
 Creates a driver.
 
 + Request (application/json)
     + Attributes
       + Include User
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes (Driver)
 
-+ Response 422 (application/json)
++ Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
 
 ## /drivers/{id}
 
-### Retrieve a driver [GET]
+### Pending - Retrieve a driver [GET]
 Returns a driver.
 
 + Parameters
-  + id: `19be888c-b731-4348-99f5-9bec1fc5a5ec` (string)
+  + id: `3` (number)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes (Driver)
 
 + Response 404 (application/json)
@@ -311,7 +368,7 @@ Returns a driver.
 
 ## Delivery
 + pickup_at: `2016-01-01T18:00Z` (string, nullable)
-+ deliver_at: `2016-01-01T18:00Z` (string)
++ deliver_at: `2016-01-01T19:00Z` (string)
 + instructions: `Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are. I have a gun.` (string)
 + route (Route)
 + order (Order)
@@ -321,11 +378,11 @@ Returns a driver.
 + pickup (RoutePoint)
 
 ## RoutePoint
-+ coordinates (Coordinates)
++ coordinates (Coordinates, optional)
 + address: `1239 Bartoletti Fords Suite 239` (string)
 
 ## Order
-+ items (OrderItem) - List of items to be delivered
++ items (array[OrderItem]) - List of items to be delivered
 + purchased: `true` (boolean) - Client has already paid
 + payment: `true` (boolean) - Client have to pay directly to the driver
 
@@ -340,11 +397,12 @@ Returns a driver.
 + manager (Manager)
 + signature_file (SignatureFile)
 + photos (array[Photo])
-+ started_at: `2016-01-01T15:01:23Z`
-+ cancelled_at: `2016-01-01T15:01:23Z`
-+ completed_at: `2016-01-01T15:01:23Z`
-+ signed_at: `2016-01-01T15:01:23Z`
-+ reason_cancel: `Customer did not answer` (string)
++ accepted_at: `2016-01-01T15:01:23Z` (string, nullable)
++ started_at: `2016-01-01T15:01:23Z` (string, nullable)
++ cancelled_at: `2016-01-01T15:01:23Z` (string, nullable)
++ completed_at: `2016-01-01T15:01:23Z` (string, nullable)
++ signed_at: `2016-01-01T15:01:23Z` (string, nullable)
++ reason_cancel (CancelReason, nullable)
 
 ## SignatureFile
 + filename: `j_f2b337f8-55db-40f9-b052-ce8210cac868.png` (string)
@@ -368,17 +426,17 @@ Returns a driver.
 + last_name: `Grimes` (string)
 
 ## Driver
-+ id: `45860a5e-16da-4a78-b192-f024907484d2` (string)
++ id: `3` (string)
 + Include User
 + coordinates (Coordinates)
-+ status: `online` (DriverStatus)
++ status: `online` (string) - enum: [online, offline]
 
 ## Manager
-+ id: `04b4db1e-dd13-4395-8f1f-b1ea8cbba79a` (string)
++ id: `1` (string)
 + Include User
 
 ## Customer
-+ id: `bc59e4f6-2fba-46ad-a71e-2535b4899061` (string)
++ id: `2` (string)
 + Include User
 
 ## Comment
@@ -400,3 +458,7 @@ Returns a driver.
 + errors (object)
   + base: `Some basic error happened` (array, optional)
   + field: `Some field is invalid` (array, optional)
+
+## Unauthorized
++ errors (object)
+  + base: `You cannot perform this action.` (array)

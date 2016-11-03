@@ -97,7 +97,7 @@ Returns delivery.
 + Response 404 (application/json)
     + Attributes (NotFoundError)
 
-### Pending - Update a delivery [PUT]
+### Update a delivery [PUT]
 Updates a delivery.
 
 + Parameters
@@ -111,7 +111,7 @@ Updates a delivery.
 + Response 404 (application/json)
     + Attributes (NotFoundError)
 
-### Pending - Delete a delivery [DELETE]
+### Delete a delivery [DELETE]
 Delete a delivery.
 
 + Parameters
@@ -235,7 +235,7 @@ Driver completes a job.
 
 ## /jobs/{id}/sign
 
-### Pending - Sign a job [POST]
+### Sign a job [POST]
 Driver signs a job.
 
 + Parameters
@@ -258,7 +258,7 @@ Driver signs a job.
 
 ## /jobs/{job_id}/photos
 
-### Pending - Add a photo to a job [POST]
+### Add a photo to a job [POST]
 Driver adds a photo to a job.
 
 + Parameters
@@ -276,7 +276,7 @@ Driver adds a photo to a job.
 + Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
 
-### Pending - List all photos [GET]
+### List all photos [GET]
 Returns a list of job's photos.
 
 + Parameters
@@ -292,7 +292,7 @@ Returns a list of job's photos.
 
 ## /jobs/{job_id}/comments
 
-### Pending - List all comments [GET]
+### List all comments [GET]
 Returns a list of job's comments.
 
 + Parameters
@@ -304,7 +304,7 @@ Returns a list of job's comments.
 + Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
 
-### Pending - Add a comment to a job [POST]
+### Add a comment to a job [POST]
 Driver adds a comment to a job.
 
 + Parameters
@@ -352,7 +352,7 @@ Creates a driver.
 
 ## /drivers/{id}
 
-### Pending - Retrieve a driver [GET]
+### Retrieve a driver [GET]
 Returns a driver.
 
 + Parameters

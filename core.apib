@@ -67,11 +67,25 @@ Returns all active deliveries.
 ### Create Delivery [POST]
 Creates a delivery.
 
-+ Request (application/json)
++ Request with recipient_id (application/json)
     + Attributes
       + delivery
-          + Include Delivery
-          + customer_id: `2` (string)
+          + recipient_id: `2` (number)
+          + pickup_at: `2016-01-01T18:00Z` (string, nullable)
+          + deliver_at: `2016-01-01T19:00Z` (string)
+          + instructions: `Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are.` (string)
+          + route (Route)
+          + order (Order)
+
++ Request with recipient data (application/json)
+    + Attributes
+      + delivery
+          + recipient (RecipientParams)
+          + pickup_at: `2016-01-01T18:00Z` (string, nullable)
+          + deliver_at: `2016-01-01T19:00Z` (string)
+          + instructions: `Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are.` (string)
+          + route (Route)
+          + order (Order)
 
 + Response 201 (application/json; charset=utf-8)
     + Attributes
@@ -363,9 +377,11 @@ Returns a driver.
 # Data Structures
 
 ## Delivery
++ manager (Manager)
++ recipient (Recipient)
 + pickup_at: `2016-01-01T18:00Z` (string, nullable)
 + deliver_at: `2016-01-01T19:00Z` (string)
-+ instructions: `Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are. I have a gun.` (string)
++ instructions: `Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are.` (string)
 + route (Route)
 + order (Order)
 
@@ -389,8 +405,6 @@ Returns a driver.
 ## Job
 + delivery (Delivery)
 + driver (Driver)
-+ customer (Customer)
-+ manager (Manager)
 + signature_file (SignatureFile)
 + photos (array[Photo])
 + accepted_at: `2016-01-01T15:01:23Z` (string, nullable)
@@ -468,8 +482,8 @@ Returns a driver.
 
 ## CancelReason (enum)
 - driver_fault
-- customer_fault
-- customer_cancel
+- recipient_fault
+- recipient_cancel
 
 ## Photo
 + filename: `j_f2b337f8-55db-40f9-b052-ce8210cac868.png` (string)
@@ -497,9 +511,16 @@ Returns a driver.
 + id: `1` (string)
 + Include User
 
-## Customer
+## Recipient
 + id: `2` (string)
-+ Include User
++ phone: `470.408.0187` (string)
++ name: `John Smith` (string)
++ notes: `VIP client` (string)
+
+## RecipientParams
++ phone: `470.408.0187` (string)
++ name: `John Smith` (string)
++ notes: `VIP client` (string)
 
 ## Comment
 + text: `I'm on my way. Can be a bit late because of traffic jams` (string)

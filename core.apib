@@ -163,13 +163,11 @@ Driver accepts a job.
     + id: `1` (number)
 
 + Request (application/json)
-    + Attributes
-      + driver_id: `3` (string)
 
 + Response 200 (application/json; charset=utf-8)
     + Attributes
       + id: `1` (number)
-      + Include Job
+      + Include AcceptedJob
 
 + Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
@@ -183,13 +181,11 @@ Driver starts a job.
     + id: `1` (number)
 
 + Request (application/json)
-    + Attributes
-      + driver_id: `3` (string)
 
 + Response 200 (application/json; charset=utf-8)
     + Attributes
       + id: `1` (number)
-      + Include Job
+      + Include StartedJob
 
 + Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
@@ -204,13 +200,14 @@ Driver cancels a job.
 
 + Request (application/json)
     + Attributes
-      + job (object)
-          + reason: `driver_fault` (string)
+      + driver_id: `3` (string)
+      + reason: `driver_fault` (string)
+      + notes: `My car is broken` (string)
 
 + Response 200 (application/json; charset=utf-8)
     + Attributes
       + id: `1` (number)
-      + Include Job
+      + Include CancelledJob
 
 + Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
@@ -228,7 +225,7 @@ Driver completes a job.
 + Response 200 (application/json; charset=utf-8)
     + Attributes
       + id: `1` (number)
-      + Include Job
+      + Include CompletedJob
 
 + Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
@@ -249,7 +246,7 @@ Driver signs a job.
 + Response 200 (application/json; charset=utf-8)
     + Attributes
       + id: `1` (number)
-      + Include Job
+      + Include SignedJob
 
 + Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
@@ -342,10 +339,9 @@ Creates a driver.
 
 + Request (application/json)
     + Attributes
-      + Include User
+      + Include InviteDriverParams
 
-+ Response 200 (application/json; charset=utf-8)
-    + Attributes (Driver)
++ Response 201 (application/json; charset=utf-8)
 
 + Response 422 (application/json; charset=utf-8)
     + Attributes (UnprocessableEntityError)
@@ -403,6 +399,67 @@ Returns a driver.
 + completed_at: `2016-01-01T15:01:23Z` (string, nullable)
 + signed_at: `2016-01-01T15:01:23Z` (string, nullable)
 + reason_cancel (CancelReason, nullable)
++ reason_notes: `My car is broken` (string, nullable)
+
+## AcceptedJob (Job)
++ Include Job
++ signature_file (object, nullable)
++ photos (array, nullable)
++ accepted_at: `2016-01-01T15:01:23Z` (string, nullable)
++ started_at (string, nullable)
++ cancelled_at (string, nullable)
++ completed_at (string, nullable)
++ signed_at (string, nullable)
++ reason_cancel (string, nullable)
++ reason_notes (string, nullable)
+
+## StartedJob (Job)
++ Include Job
++ signature_file (object, nullable)
++ photos (array, nullable)
++ accepted_at: `2016-01-01T15:01:23Z` (string, nullable)
++ started_at: `2016-01-01T15:10:23Z` (string, nullable)
++ cancelled_at (string, nullable)
++ completed_at (string, nullable)
++ signed_at (string, nullable)
++ reason_cancel (string, nullable)
++ reason_notes (string, nullable)
+
+## CancelledJob (Job)
++ Include Job
++ signature_file (object, nullable)
++ photos (array, nullable)
++ accepted_at: `2016-01-01T15:01:23Z` (string)
++ started_at: `2016-01-01T15:10:23Z` (string)
++ cancelled_at: `2016-01-01T15:30:23Z` (string)
++ completed_at (string, nullable)
++ signed_at (string, nullable)
++ reason_cancel: `driver_fault` (CancelReason)
++ reason_notes: `My car is broken` (string)
+
+## CompletedJob (Job)
++ Include Job
++ signature_file (object, nullable)
++ photos (array, nullable)
++ accepted_at: `2016-01-01T15:01:23Z` (string, nullable)
++ started_at: `2016-01-01T15:10:23Z` (string, nullable)
++ cancelled_at (string, nullable)
++ completed_at: `2016-01-01T16:00:00Z` (string, nullable)
++ signed_at (string, nullable)
++ reason_cancel (string, nullable)
++ reason_notes (string, nullable)
+
+## SignedJob (Job)
++ Include Job
++ signature_file (object, nullable)
++ photos (array, nullable)
++ accepted_at: `2016-01-01T15:01:23Z` (string, nullable)
++ started_at: `2016-01-01T15:10:23Z` (string, nullable)
++ cancelled_at (string, nullable)
++ completed_at: `2016-01-01T16:00:00Z` (string, nullable)
++ signed_at: `2016-01-01T16:02:00Z` (string, nullable)
++ reason_cancel (string, nullable)
++ reason_notes (string, nullable)
 
 ## SignatureFile
 + filename: `j_f2b337f8-55db-40f9-b052-ce8210cac868.png` (string)
@@ -427,9 +484,14 @@ Returns a driver.
 
 ## Driver
 + id: `3` (string)
-+ Include User
++ Include InviteDriverParams
 + coordinates (Coordinates)
 + status: `online` (string) - enum: [online, offline]
+
+## InviteDriverParams
++ phone: `470.408.0187` (string)
++ first_name: `Hoyt` (string)
++ last_name: `Grimes` (string)
 
 ## Manager
 + id: `1` (string)

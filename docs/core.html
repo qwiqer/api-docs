@@ -692,7 +692,6 @@
     </span>}</span>,
     "<span class="hljs-attribute">driver</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
-      "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"user@example.com"</span></span>,
       "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
       "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
       "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span></span>,
@@ -733,7 +732,8 @@
     "<span class="hljs-attribute">cancelled_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
     "<span class="hljs-attribute">completed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
     "<span class="hljs-attribute">signed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-    "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value"><span class="hljs-string">"driver_fault"</span>
+    "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value"><span class="hljs-string">"driver_fault"</span></span>,
+    "<span class="hljs-attribute">reason_notes</span>": <span class="hljs-value"><span class="hljs-string">"My car is broken"</span>
   </span>}
 ]</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
@@ -774,7 +774,6 @@
   </span>}</span>,
   "<span class="hljs-attribute">driver</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
-    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"user@example.com"</span></span>,
     "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
     "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
     "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span></span>,
@@ -815,7 +814,8 @@
   "<span class="hljs-attribute">cancelled_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
   "<span class="hljs-attribute">completed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
   "<span class="hljs-attribute">signed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value"><span class="hljs-string">"driver_fault"</span>
+  "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value"><span class="hljs-string">"driver_fault"</span></span>,
+  "<span class="hljs-attribute">reason_notes</span>": <span class="hljs-value"><span class="hljs-string">"My car is broken"</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -904,9 +904,6 @@
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
       "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">email</span>": <span class="hljs-value">{
           "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
         </span>}</span>,
         "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
@@ -1032,20 +1029,16 @@
         <span class="hljs-string">"customer_fault"</span>,
         <span class="hljs-string">"customer_cancel"</span>
       ]
+    </span>}</span>,
+    "<span class="hljs-attribute">reason_notes</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
+        <span class="hljs-string">"string"</span>,
+        <span class="hljs-string">"null"</span>
+      ]
     </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="jobs-" class="resource"><h3 class="resource-heading">Accept a job <a href="#jobs-" class="permalink">&nbsp;&para;</a></h3><div id="jobs-post" class="action post"><h4 class="action-heading"><div class="name">Accept a job</div><a href="#jobs-post" class="method post">POST</a><code class="uri">/jobs/{id}/accept</code></h4><p>Driver accepts a job.</p>
-<h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://api.staging.qwiqer.com</span>/jobs/<span class="hljs-attribute" title="id">1</span>/accept</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span></dd></dl></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">driver_id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span>
-</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
-  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
-  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">driver_id</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-    </span>}
-  </span>}
-</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+<h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://api.staging.qwiqer.com</span>/jobs/<span class="hljs-attribute" title="id">1</span>/accept</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span></dd></dl></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
   "<span class="hljs-attribute">delivery</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
@@ -1080,7 +1073,6 @@
   </span>}</span>,
   "<span class="hljs-attribute">driver</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
-    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"user@example.com"</span></span>,
     "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
     "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
     "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span></span>,
@@ -1104,24 +1096,15 @@
     "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
     "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span>
   </span>}</span>,
-  "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">filename</span>": <span class="hljs-value"><span class="hljs-string">"j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-    "<span class="hljs-attribute">url</span>": <span class="hljs-value"><span class="hljs-string">"https://cdn.qwiqer.com/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span>
-  </span>}</span>,
-  "<span class="hljs-attribute">photos</span>": <span class="hljs-value">[
-    {
-      "<span class="hljs-attribute">filename</span>": <span class="hljs-value"><span class="hljs-string">"j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-      "<span class="hljs-attribute">url</span>": <span class="hljs-value"><span class="hljs-string">"https://cdn.qwiqer.com/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span>
-    </span>}
-  ]</span>,
+  "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">photos</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
   "<span class="hljs-attribute">accepted_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">started_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">cancelled_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">completed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">signed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value"><span class="hljs-string">"driver_fault"</span>
+  "<span class="hljs-attribute">started_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">cancelled_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">completed_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">signed_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">reason_notes</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -1212,9 +1195,6 @@
         "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
           "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">email</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
         "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
           "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
         </span>}</span>,
@@ -1282,21 +1262,14 @@
       </span>}
     </span>}</span>,
     "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">filename</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">url</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}
-      </span>}
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
+        <span class="hljs-string">"object"</span>,
+        <span class="hljs-string">"null"</span>
+      ]</span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{}
     </span>}</span>,
     "<span class="hljs-attribute">photos</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"null"</span>
     </span>}</span>,
     "<span class="hljs-attribute">accepted_at</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
@@ -1332,11 +1305,12 @@
       "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
         <span class="hljs-string">"string"</span>,
         <span class="hljs-string">"null"</span>
-      ]</span>,
-      "<span class="hljs-attribute">enum</span>": <span class="hljs-value">[
-        <span class="hljs-string">"driver_fault"</span>,
-        <span class="hljs-string">"customer_fault"</span>,
-        <span class="hljs-string">"customer_cancel"</span>
+      ]
+    </span>}</span>,
+    "<span class="hljs-attribute">reason_notes</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
+        <span class="hljs-string">"string"</span>,
+        <span class="hljs-string">"null"</span>
       ]
     </span>}
   </span>}
@@ -1366,17 +1340,7 @@
     </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="jobs--1" class="resource"><h3 class="resource-heading">Start a job <a href="#jobs--1" class="permalink">&nbsp;&para;</a></h3><div id="jobs-post-1" class="action post"><h4 class="action-heading"><div class="name">Start a job</div><a href="#jobs-post-1" class="method post">POST</a><code class="uri">/jobs/{id}/start</code></h4><p>Driver starts a job.</p>
-<h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://api.staging.qwiqer.com</span>/jobs/<span class="hljs-attribute" title="id">1</span>/start</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span></dd></dl></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">driver_id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span>
-</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
-  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
-  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">driver_id</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-    </span>}
-  </span>}
-</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+<h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://api.staging.qwiqer.com</span>/jobs/<span class="hljs-attribute" title="id">1</span>/start</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span></dd></dl></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
   "<span class="hljs-attribute">delivery</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
@@ -1411,7 +1375,6 @@
   </span>}</span>,
   "<span class="hljs-attribute">driver</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
-    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"user@example.com"</span></span>,
     "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
     "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
     "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span></span>,
@@ -1435,24 +1398,15 @@
     "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
     "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span>
   </span>}</span>,
-  "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">filename</span>": <span class="hljs-value"><span class="hljs-string">"j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-    "<span class="hljs-attribute">url</span>": <span class="hljs-value"><span class="hljs-string">"https://cdn.qwiqer.com/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span>
-  </span>}</span>,
-  "<span class="hljs-attribute">photos</span>": <span class="hljs-value">[
-    {
-      "<span class="hljs-attribute">filename</span>": <span class="hljs-value"><span class="hljs-string">"j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-      "<span class="hljs-attribute">url</span>": <span class="hljs-value"><span class="hljs-string">"https://cdn.qwiqer.com/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span>
-    </span>}
-  ]</span>,
+  "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">photos</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
   "<span class="hljs-attribute">accepted_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">started_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">cancelled_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">completed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">signed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value"><span class="hljs-string">"driver_fault"</span>
+  "<span class="hljs-attribute">started_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:10:23Z"</span></span>,
+  "<span class="hljs-attribute">cancelled_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">completed_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">signed_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">reason_notes</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -1543,9 +1497,6 @@
         "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
           "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">email</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
         "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
           "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
         </span>}</span>,
@@ -1613,21 +1564,14 @@
       </span>}
     </span>}</span>,
     "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">filename</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">url</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}
-      </span>}
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
+        <span class="hljs-string">"object"</span>,
+        <span class="hljs-string">"null"</span>
+      ]</span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{}
     </span>}</span>,
     "<span class="hljs-attribute">photos</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"null"</span>
     </span>}</span>,
     "<span class="hljs-attribute">accepted_at</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
@@ -1663,11 +1607,12 @@
       "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
         <span class="hljs-string">"string"</span>,
         <span class="hljs-string">"null"</span>
-      ]</span>,
-      "<span class="hljs-attribute">enum</span>": <span class="hljs-value">[
-        <span class="hljs-string">"driver_fault"</span>,
-        <span class="hljs-string">"customer_fault"</span>,
-        <span class="hljs-string">"customer_cancel"</span>
+      ]
+    </span>}</span>,
+    "<span class="hljs-attribute">reason_notes</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
+        <span class="hljs-string">"string"</span>,
+        <span class="hljs-string">"null"</span>
       ]
     </span>}
   </span>}
@@ -1698,20 +1643,21 @@
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="jobs--2" class="resource"><h3 class="resource-heading">Cancel a job <a href="#jobs--2" class="permalink">&nbsp;&para;</a></h3><div id="jobs-post-2" class="action post"><h4 class="action-heading"><div class="name">Cancel a job</div><a href="#jobs-post-2" class="method post">POST</a><code class="uri">/jobs/{id}/cancel</code></h4><p>Driver cancels a job.</p>
 <h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://api.staging.qwiqer.com</span>/jobs/<span class="hljs-attribute" title="id">1</span>/cancel</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span></dd></dl></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">job</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">reason</span>": <span class="hljs-value"><span class="hljs-string">"driver_fault"</span>
-  </span>}
+  "<span class="hljs-attribute">driver_id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
+  "<span class="hljs-attribute">reason</span>": <span class="hljs-value"><span class="hljs-string">"driver_fault"</span></span>,
+  "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"My car is broken"</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
   "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">job</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">reason</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}
-      </span>}
+    "<span class="hljs-attribute">driver_id</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">reason</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">notes</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
     </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
@@ -1749,7 +1695,6 @@
   </span>}</span>,
   "<span class="hljs-attribute">driver</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
-    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"user@example.com"</span></span>,
     "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
     "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
     "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span></span>,
@@ -1773,24 +1718,16 @@
     "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
     "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span>
   </span>}</span>,
-  "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">filename</span>": <span class="hljs-value"><span class="hljs-string">"j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-    "<span class="hljs-attribute">url</span>": <span class="hljs-value"><span class="hljs-string">"https://cdn.qwiqer.com/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span>
-  </span>}</span>,
-  "<span class="hljs-attribute">photos</span>": <span class="hljs-value">[
-    {
-      "<span class="hljs-attribute">filename</span>": <span class="hljs-value"><span class="hljs-string">"j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-      "<span class="hljs-attribute">url</span>": <span class="hljs-value"><span class="hljs-string">"https://cdn.qwiqer.com/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span>
-    </span>}
-  ]</span>,
+  "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value"><span class="hljs-string">"driver_fault"</span></span>,
+  "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">photos</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
   "<span class="hljs-attribute">accepted_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">started_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">cancelled_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">completed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">signed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value"><span class="hljs-string">"driver_fault"</span>
+  "<span class="hljs-attribute">started_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:10:23Z"</span></span>,
+  "<span class="hljs-attribute">cancelled_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:30:23Z"</span></span>,
+  "<span class="hljs-attribute">completed_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">signed_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">reason_cancel: `driver_fault`</span>": <span class="hljs-value"><span class="hljs-string">"driver_fault"</span></span>,
+  "<span class="hljs-attribute">reason_notes</span>": <span class="hljs-value"><span class="hljs-string">"My car is broken"</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -1881,9 +1818,6 @@
         "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
           "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">email</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
         "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
           "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
         </span>}</span>,
@@ -1950,40 +1884,35 @@
         </span>}
       </span>}
     </span>}</span>,
+    "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
+        <span class="hljs-string">"string"</span>,
+        <span class="hljs-string">"null"</span>
+      ]</span>,
+      "<span class="hljs-attribute">enum</span>": <span class="hljs-value">[
+        <span class="hljs-string">"driver_fault"</span>,
+        <span class="hljs-string">"customer_fault"</span>,
+        <span class="hljs-string">"customer_cancel"</span>
+      ]
+    </span>}</span>,
     "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">filename</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">url</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}
-      </span>}
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
+        <span class="hljs-string">"object"</span>,
+        <span class="hljs-string">"null"</span>
+      ]</span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{}
     </span>}</span>,
     "<span class="hljs-attribute">photos</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"null"</span>
     </span>}</span>,
     "<span class="hljs-attribute">accepted_at</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
-      ]
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
     </span>}</span>,
     "<span class="hljs-attribute">started_at</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
-      ]
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
     </span>}</span>,
     "<span class="hljs-attribute">cancelled_at</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
-      ]
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
     </span>}</span>,
     "<span class="hljs-attribute">completed_at</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
@@ -1997,16 +1926,16 @@
         <span class="hljs-string">"null"</span>
       ]
     </span>}</span>,
-    "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
-      ]</span>,
+    "<span class="hljs-attribute">reason_cancel: `driver_fault`</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
       "<span class="hljs-attribute">enum</span>": <span class="hljs-value">[
         <span class="hljs-string">"driver_fault"</span>,
         <span class="hljs-string">"customer_fault"</span>,
         <span class="hljs-string">"customer_cancel"</span>
       ]
+    </span>}</span>,
+    "<span class="hljs-attribute">reason_notes</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
     </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>422</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
@@ -2070,7 +1999,6 @@
   </span>}</span>,
   "<span class="hljs-attribute">driver</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
-    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"user@example.com"</span></span>,
     "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
     "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
     "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span></span>,
@@ -2094,24 +2022,15 @@
     "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
     "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span>
   </span>}</span>,
-  "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">filename</span>": <span class="hljs-value"><span class="hljs-string">"j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-    "<span class="hljs-attribute">url</span>": <span class="hljs-value"><span class="hljs-string">"https://cdn.qwiqer.com/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span>
-  </span>}</span>,
-  "<span class="hljs-attribute">photos</span>": <span class="hljs-value">[
-    {
-      "<span class="hljs-attribute">filename</span>": <span class="hljs-value"><span class="hljs-string">"j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-      "<span class="hljs-attribute">url</span>": <span class="hljs-value"><span class="hljs-string">"https://cdn.qwiqer.com/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span>
-    </span>}
-  ]</span>,
+  "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">photos</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
   "<span class="hljs-attribute">accepted_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">started_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">cancelled_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">completed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">signed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value"><span class="hljs-string">"driver_fault"</span>
+  "<span class="hljs-attribute">started_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:10:23Z"</span></span>,
+  "<span class="hljs-attribute">cancelled_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">completed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T16:00:00Z"</span></span>,
+  "<span class="hljs-attribute">signed_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">reason_notes</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -2202,9 +2121,6 @@
         "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
           "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">email</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
         "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
           "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
         </span>}</span>,
@@ -2272,21 +2188,14 @@
       </span>}
     </span>}</span>,
     "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">filename</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">url</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}
-      </span>}
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
+        <span class="hljs-string">"object"</span>,
+        <span class="hljs-string">"null"</span>
+      ]</span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{}
     </span>}</span>,
     "<span class="hljs-attribute">photos</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"null"</span>
     </span>}</span>,
     "<span class="hljs-attribute">accepted_at</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
@@ -2322,11 +2231,12 @@
       "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
         <span class="hljs-string">"string"</span>,
         <span class="hljs-string">"null"</span>
-      ]</span>,
-      "<span class="hljs-attribute">enum</span>": <span class="hljs-value">[
-        <span class="hljs-string">"driver_fault"</span>,
-        <span class="hljs-string">"customer_fault"</span>,
-        <span class="hljs-string">"customer_cancel"</span>
+      ]
+    </span>}</span>,
+    "<span class="hljs-attribute">reason_notes</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
+        <span class="hljs-string">"string"</span>,
+        <span class="hljs-string">"null"</span>
       ]
     </span>}
   </span>}
@@ -2408,7 +2318,6 @@
   </span>}</span>,
   "<span class="hljs-attribute">driver</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
-    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"user@example.com"</span></span>,
     "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
     "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
     "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span></span>,
@@ -2432,24 +2341,15 @@
     "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
     "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span>
   </span>}</span>,
-  "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">filename</span>": <span class="hljs-value"><span class="hljs-string">"j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-    "<span class="hljs-attribute">url</span>": <span class="hljs-value"><span class="hljs-string">"https://cdn.qwiqer.com/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span>
-  </span>}</span>,
-  "<span class="hljs-attribute">photos</span>": <span class="hljs-value">[
-    {
-      "<span class="hljs-attribute">filename</span>": <span class="hljs-value"><span class="hljs-string">"j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-      "<span class="hljs-attribute">url</span>": <span class="hljs-value"><span class="hljs-string">"https://cdn.qwiqer.com/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span>
-    </span>}
-  ]</span>,
+  "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">photos</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
   "<span class="hljs-attribute">accepted_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">started_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">cancelled_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">completed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">signed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value"><span class="hljs-string">"driver_fault"</span>
+  "<span class="hljs-attribute">started_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:10:23Z"</span></span>,
+  "<span class="hljs-attribute">cancelled_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">completed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T16:00:00Z"</span></span>,
+  "<span class="hljs-attribute">signed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T16:02:00Z"</span></span>,
+  "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">reason_notes</span>": <span class="hljs-value"><span class="hljs-literal">null</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -2540,9 +2440,6 @@
         "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
           "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">email</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
         "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
           "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
         </span>}</span>,
@@ -2610,21 +2507,14 @@
       </span>}
     </span>}</span>,
     "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">filename</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">url</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}
-      </span>}
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
+        <span class="hljs-string">"object"</span>,
+        <span class="hljs-string">"null"</span>
+      ]</span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{}
     </span>}</span>,
     "<span class="hljs-attribute">photos</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"null"</span>
     </span>}</span>,
     "<span class="hljs-attribute">accepted_at</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
@@ -2660,11 +2550,12 @@
       "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
         <span class="hljs-string">"string"</span>,
         <span class="hljs-string">"null"</span>
-      ]</span>,
-      "<span class="hljs-attribute">enum</span>": <span class="hljs-value">[
-        <span class="hljs-string">"driver_fault"</span>,
-        <span class="hljs-string">"customer_fault"</span>,
-        <span class="hljs-string">"customer_cancel"</span>
+      ]
+    </span>}</span>,
+    "<span class="hljs-attribute">reason_notes</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
+        <span class="hljs-string">"string"</span>,
+        <span class="hljs-string">"null"</span>
       ]
     </span>}
   </span>}
@@ -2927,7 +2818,6 @@
 <h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">http://api.staging.qwiqer.com</span>/drivers</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Authorization</span>: <span class="hljs-string">Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0NzYzNzg1NzIsInN1YiI6MX0.5MuPNzEz9EpbZlGTOPYB99lRqjj1PubmyqvmH8hYggI</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>[
   {
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
-    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"user@example.com"</span></span>,
     "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
     "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
     "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span></span>,
@@ -2942,7 +2832,6 @@
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="drivers-collection-post" class="action post"><h4 class="action-heading"><div class="name">Pending - Invite a driver</div><a href="#drivers-collection-post" class="method post">POST</a><code class="uri">/drivers</code></h4><p>Creates a driver.</p>
 <h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://api.staging.qwiqer.com</span>/drivers</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"user@example.com"</span></span>,
   "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
   "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
   "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span>
@@ -2950,9 +2839,6 @@
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
   "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">email</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-    </span>}</span>,
     "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
     </span>}</span>,
@@ -2963,53 +2849,7 @@
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
     </span>}
   </span>}
-</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
-  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"user@example.com"</span></span>,
-  "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
-  "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
-  "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span></span>,
-  "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-    "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
-  </span>}</span>,
-  "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-string">"online"</span>
-</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
-  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
-  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">email</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">first_name</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">last_name</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-        </span>}
-      </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">status</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
-      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"enum: [online, offline]"</span>
-    </span>}
-  </span>}
-</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>422</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>201</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>422</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">errors</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">base</span>": <span class="hljs-value">[
       <span class="hljs-string">"Some basic error happened"</span>
@@ -3037,7 +2877,6 @@
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="drivers-" class="resource"><h3 class="resource-heading">Retrieve a driver <a href="#drivers-" class="permalink">&nbsp;&para;</a></h3><div id="drivers-get" class="action get"><h4 class="action-heading"><div class="name">Retrieve a driver</div><a href="#drivers-get" class="method get">GET</a><code class="uri">/drivers/{id}</code></h4><p>Returns a driver.</p>
 <h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">http://api.staging.qwiqer.com</span>/drivers/<span class="hljs-attribute" title="id">3</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>3</span></span></dd></dl></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
-  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"user@example.com"</span></span>,
   "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
   "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
   "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span></span>,
@@ -3051,9 +2890,6 @@
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
   "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">email</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
     </span>}</span>,
     "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
@@ -3091,7 +2927,7 @@
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
     </span>}
   </span>}
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 03 Nov 2016</p><script>/* eslint-env browser */
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 09 Nov 2016</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 

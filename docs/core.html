@@ -101,78 +101,87 @@
       "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
       "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span>
     </span>}</span>,
-    "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"2"</span></span>,
-      "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
-      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
-      "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
-    "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
-    "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span></span>,
-    "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+    "<span class="hljs-attribute">steps</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"dropoff"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+          "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"1-433-198-2383"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Ms. Charles Herzog"</span></span>,
+          "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
-      </span>}</span>,
-      "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">52.212321</span></span>,
+          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">71.872433</span></span>,
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"61459 Wiza Common"</span></span>,
+          "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">"7th Floor, Apt. 708"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"pickup"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+          "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
+          "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"Joe's Pizza"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
+          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span></span>,
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords"</span></span>,
+          "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">""</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Get the order from Joe's pizza"</span>
       </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">items</span>": <span class="hljs-value">[
-        {
-          "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"iPhone 7, 64GB, black"</span></span>,
-          "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-number">1100</span>
-        </span>}
-      ]</span>,
-      "<span class="hljs-attribute">purchased</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-      "<span class="hljs-attribute">payment</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
-    </span>}
+    ]
   </span>}
 ]</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="deliveries-collection-post" class="action post"><h4 class="action-heading"><div class="name">Create Delivery</div><a href="#deliveries-collection-post" class="method post">POST</a><code class="uri">/deliveries</code></h4><p>Creates a delivery.</p>
-<h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://api.staging.qwiqer.com</span>/deliveries</span></div><div class="title"><strong>Request&nbsp;&nbsp;<code>with recipient_id</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+<h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://api.staging.qwiqer.com</span>/deliveries</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">delivery</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">recipient_id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
-    "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
-    "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
-    "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span></span>,
-    "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+    "<span class="hljs-attribute">steps</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"pickup"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
+          "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"Joe's Pizza"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
-      </span>}</span>,
-      "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
           "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span></span>,
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords"</span></span>,
+          "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">""</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Get the order from Joe's pizza"</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"dropoff"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"1-433-198-2383"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Ms. Charles Herzog"</span></span>,
+          "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">52.212321</span></span>,
+          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">71.872433</span></span>,
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"61459 Wiza Common"</span></span>,
+          "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">"7th Floor, Apt. 708"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span>
       </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">items</span>": <span class="hljs-value">[
-        {
-          "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"iPhone 7, 64GB, black"</span></span>,
-          "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-number">1100</span>
-        </span>}
-      ]</span>,
-      "<span class="hljs-attribute">purchased</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-      "<span class="hljs-attribute">payment</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
-    </span>}
+    ]
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
@@ -181,120 +190,38 @@
     "<span class="hljs-attribute">delivery</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
       "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">recipient_id</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-            <span class="hljs-string">"string"</span>,
-            <span class="hljs-string">"null"</span>
-          ]
-        </span>}</span>,
-        "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                    "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}</span>,
-                    "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}
-                  </span>}
-                </span>}</span>,
-                "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-                </span>}
-              </span>}
-            </span>}</span>,
-            "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                    "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}</span>,
-                    "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}
-                  </span>}
-                </span>}</span>,
-                "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-                </span>}
-              </span>}
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"List of items to be delivered"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">purchased</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client has already paid"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">payment</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client have to pay directly to the driver"</span>
-            </span>}
-          </span>}
+        "<span class="hljs-attribute">steps</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
         </span>}
       </span>}
     </span>}
   </span>}
-</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Request&nbsp;&nbsp;<code>with recipient data</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Request&nbsp;&nbsp;<code>with ids</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">delivery</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
-      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
-      "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
-    "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
-    "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span></span>,
-    "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+    "<span class="hljs-attribute">steps</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"pickup"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">3</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
-      </span>}</span>,
-      "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">5</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"dropoff"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">3</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">5</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span>
       </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">items</span>": <span class="hljs-value">[
-        {
-          "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"iPhone 7, 64GB, black"</span></span>,
-          "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-number">1100</span>
-        </span>}
-      ]</span>,
-      "<span class="hljs-attribute">purchased</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-      "<span class="hljs-attribute">payment</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
-    </span>}
+    ]
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
@@ -303,91 +230,8 @@
     "<span class="hljs-attribute">delivery</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
       "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">notes</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-            <span class="hljs-string">"string"</span>,
-            <span class="hljs-string">"null"</span>
-          ]
-        </span>}</span>,
-        "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                    "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}</span>,
-                    "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}
-                  </span>}
-                </span>}</span>,
-                "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-                </span>}
-              </span>}
-            </span>}</span>,
-            "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                    "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}</span>,
-                    "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}
-                  </span>}
-                </span>}</span>,
-                "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-                </span>}
-              </span>}
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"List of items to be delivered"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">purchased</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client has already paid"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">payment</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client have to pay directly to the driver"</span>
-            </span>}
-          </span>}
+        "<span class="hljs-attribute">steps</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
         </span>}
       </span>}
     </span>}
@@ -401,41 +245,46 @@
     "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
     "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span>
   </span>}</span>,
-  "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"2"</span></span>,
-    "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
-    "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
-  </span>}</span>,
-  "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
-  "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
-  "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span></span>,
-  "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-        "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+  "<span class="hljs-attribute">steps</span>": <span class="hljs-value">[
+    {
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"dropoff"</span></span>,
+      "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+        "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"1-433-198-2383"</span></span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Ms. Charles Herzog"</span></span>,
+        "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
       </span>}</span>,
-      "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-        "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+      "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+        "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">52.212321</span></span>,
+        "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">71.872433</span></span>,
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"61459 Wiza Common"</span></span>,
+        "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">"7th Floor, Apt. 708"</span>
       </span>}</span>,
-      "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
+      "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
+      "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span>
+    </span>},
+    {
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"pickup"</span></span>,
+      "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
+        "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"Joe's Pizza"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
+        "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span></span>,
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords"</span></span>,
+        "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">""</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
+      "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Get the order from Joe's pizza"</span>
     </span>}
-  </span>}</span>,
-  "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">items</span>": <span class="hljs-value">[
-      {
-        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"iPhone 7, 64GB, black"</span></span>,
-        "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-number">1100</span>
-      </span>}
-    ]</span>,
-    "<span class="hljs-attribute">purchased</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-    "<span class="hljs-attribute">payment</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
-  </span>}
+  ]
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -463,94 +312,8 @@
         </span>}
       </span>}
     </span>}</span>,
-    "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">notes</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}
-      </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
-      ]
-    </span>}</span>,
-    "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">instructions</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                </span>}</span>,
-                "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                </span>}
-              </span>}
-            </span>}</span>,
-            "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                </span>}</span>,
-                "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                </span>}
-              </span>}
-            </span>}</span>,
-            "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}
-          </span>}
-        </span>}
-      </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
-          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"List of items to be delivered"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">purchased</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client has already paid"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">payment</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client have to pay directly to the driver"</span>
-        </span>}
-      </span>}
+    "<span class="hljs-attribute">steps</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
     </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>422</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
@@ -588,41 +351,46 @@
     "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
     "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span>
   </span>}</span>,
-  "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"2"</span></span>,
-    "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
-    "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
-  </span>}</span>,
-  "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
-  "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
-  "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span></span>,
-  "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-        "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+  "<span class="hljs-attribute">steps</span>": <span class="hljs-value">[
+    {
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"dropoff"</span></span>,
+      "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+        "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"1-433-198-2383"</span></span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Ms. Charles Herzog"</span></span>,
+        "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
       </span>}</span>,
-      "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-        "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+      "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+        "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">52.212321</span></span>,
+        "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">71.872433</span></span>,
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"61459 Wiza Common"</span></span>,
+        "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">"7th Floor, Apt. 708"</span>
       </span>}</span>,
-      "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
+      "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
+      "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span>
+    </span>},
+    {
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"pickup"</span></span>,
+      "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
+        "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"Joe's Pizza"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
+        "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span></span>,
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords"</span></span>,
+        "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">""</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
+      "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Get the order from Joe's pizza"</span>
     </span>}
-  </span>}</span>,
-  "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">items</span>": <span class="hljs-value">[
-      {
-        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"iPhone 7, 64GB, black"</span></span>,
-        "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-number">1100</span>
-      </span>}
-    ]</span>,
-    "<span class="hljs-attribute">purchased</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-    "<span class="hljs-attribute">payment</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
-  </span>}
+  ]
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -650,94 +418,8 @@
         </span>}
       </span>}
     </span>}</span>,
-    "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">notes</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}
-      </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
-      ]
-    </span>}</span>,
-    "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">instructions</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                </span>}</span>,
-                "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                </span>}
-              </span>}
-            </span>}</span>,
-            "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                </span>}</span>,
-                "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                </span>}
-              </span>}
-            </span>}</span>,
-            "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}
-          </span>}
-        </span>}
-      </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
-          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"List of items to be delivered"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">purchased</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client has already paid"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">payment</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client have to pay directly to the driver"</span>
-        </span>}
-      </span>}
+    "<span class="hljs-attribute">steps</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
     </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
@@ -760,41 +442,46 @@
     "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
     "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span>
   </span>}</span>,
-  "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"2"</span></span>,
-    "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
-    "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
-  </span>}</span>,
-  "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
-  "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
-  "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span></span>,
-  "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-        "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+  "<span class="hljs-attribute">steps</span>": <span class="hljs-value">[
+    {
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"dropoff"</span></span>,
+      "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+        "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"1-433-198-2383"</span></span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Ms. Charles Herzog"</span></span>,
+        "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
       </span>}</span>,
-      "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-        "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+      "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+        "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">52.212321</span></span>,
+        "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">71.872433</span></span>,
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"61459 Wiza Common"</span></span>,
+        "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">"7th Floor, Apt. 708"</span>
       </span>}</span>,
-      "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
+      "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
+      "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span>
+    </span>},
+    {
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"pickup"</span></span>,
+      "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
+        "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"Joe's Pizza"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
+        "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span></span>,
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords"</span></span>,
+        "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">""</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
+      "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Get the order from Joe's pizza"</span>
     </span>}
-  </span>}</span>,
-  "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">items</span>": <span class="hljs-value">[
-      {
-        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"iPhone 7, 64GB, black"</span></span>,
-        "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-number">1100</span>
-      </span>}
-    ]</span>,
-    "<span class="hljs-attribute">purchased</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-    "<span class="hljs-attribute">payment</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
-  </span>}
+  ]
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
@@ -822,94 +509,8 @@
         </span>}
       </span>}
     </span>}</span>,
-    "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">notes</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}
-      </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
-      ]
-    </span>}</span>,
-    "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">instructions</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                </span>}</span>,
-                "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                </span>}
-              </span>}
-            </span>}</span>,
-            "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                </span>}</span>,
-                "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                </span>}
-              </span>}
-            </span>}</span>,
-            "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}
-          </span>}
-        </span>}
-      </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
-          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"List of items to be delivered"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">purchased</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client has already paid"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">payment</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client have to pay directly to the driver"</span>
-        </span>}
-      </span>}
+    "<span class="hljs-attribute">steps</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
     </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
@@ -963,41 +564,46 @@
         "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
         "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span>
       </span>}</span>,
-      "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"2"</span></span>,
-        "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
-        "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
-      </span>}</span>,
-      "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
-      "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
-      "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span></span>,
-      "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-            "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+      "<span class="hljs-attribute">steps</span>": <span class="hljs-value">[
+        {
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"dropoff"</span></span>,
+          "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+            "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"1-433-198-2383"</span></span>,
+            "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Ms. Charles Herzog"</span></span>,
+            "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
           </span>}</span>,
-          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-            "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+            "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">52.212321</span></span>,
+            "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">71.872433</span></span>,
+            "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"61459 Wiza Common"</span></span>,
+            "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">"7th Floor, Apt. 708"</span>
           </span>}</span>,
-          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
+          "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
+          "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"pickup"</span></span>,
+          "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+            "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
+            "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
+            "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"Joe's Pizza"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+            "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
+            "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span></span>,
+            "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords"</span></span>,
+            "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">""</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
+          "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Get the order from Joe's pizza"</span>
         </span>}
-      </span>}</span>,
-      "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">items</span>": <span class="hljs-value">[
-          {
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"iPhone 7, 64GB, black"</span></span>,
-            "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-number">1100</span>
-          </span>}
-        ]</span>,
-        "<span class="hljs-attribute">purchased</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-        "<span class="hljs-attribute">payment</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
-      </span>}
+      ]
     </span>}</span>,
     "<span class="hljs-attribute">driver</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
@@ -1044,41 +650,46 @@
       "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
       "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span>
     </span>}</span>,
-    "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"2"</span></span>,
-      "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
-      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
-      "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
-    "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
-    "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span></span>,
-    "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+    "<span class="hljs-attribute">steps</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"dropoff"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+          "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"1-433-198-2383"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Ms. Charles Herzog"</span></span>,
+          "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
-      </span>}</span>,
-      "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">52.212321</span></span>,
+          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">71.872433</span></span>,
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"61459 Wiza Common"</span></span>,
+          "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">"7th Floor, Apt. 708"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"pickup"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+          "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
+          "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"Joe's Pizza"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
+          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span></span>,
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords"</span></span>,
+          "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">""</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Get the order from Joe's pizza"</span>
       </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">items</span>": <span class="hljs-value">[
-        {
-          "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"iPhone 7, 64GB, black"</span></span>,
-          "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-number">1100</span>
-        </span>}
-      ]</span>,
-      "<span class="hljs-attribute">purchased</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-      "<span class="hljs-attribute">payment</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
-    </span>}
+    ]
   </span>}</span>,
   "<span class="hljs-attribute">driver</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
@@ -1140,94 +751,8 @@
             </span>}
           </span>}
         </span>}</span>,
-        "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">notes</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-            <span class="hljs-string">"string"</span>,
-            <span class="hljs-string">"null"</span>
-          ]
-        </span>}</span>,
-        "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                    "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}</span>,
-                    "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}
-                  </span>}
-                </span>}</span>,
-                "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-                </span>}
-              </span>}
-            </span>}</span>,
-            "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                    "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}</span>,
-                    "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}
-                  </span>}
-                </span>}</span>,
-                "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-                </span>}
-              </span>}
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"List of items to be delivered"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">purchased</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client has already paid"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">payment</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client have to pay directly to the driver"</span>
-            </span>}
-          </span>}
+        "<span class="hljs-attribute">steps</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
         </span>}
       </span>}
     </span>}</span>,
@@ -1339,41 +864,46 @@
       "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
       "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span>
     </span>}</span>,
-    "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"2"</span></span>,
-      "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
-      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
-      "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
-    "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
-    "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span></span>,
-    "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+    "<span class="hljs-attribute">steps</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"dropoff"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+          "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"1-433-198-2383"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Ms. Charles Herzog"</span></span>,
+          "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
-      </span>}</span>,
-      "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">52.212321</span></span>,
+          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">71.872433</span></span>,
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"61459 Wiza Common"</span></span>,
+          "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">"7th Floor, Apt. 708"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"pickup"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+          "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
+          "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"Joe's Pizza"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
+          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span></span>,
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords"</span></span>,
+          "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">""</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Get the order from Joe's pizza"</span>
       </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">items</span>": <span class="hljs-value">[
-        {
-          "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"iPhone 7, 64GB, black"</span></span>,
-          "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-number">1100</span>
-        </span>}
-      ]</span>,
-      "<span class="hljs-attribute">purchased</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-      "<span class="hljs-attribute">payment</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
-    </span>}
+    ]
   </span>}</span>,
   "<span class="hljs-attribute">driver</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
@@ -1425,94 +955,8 @@
             </span>}
           </span>}
         </span>}</span>,
-        "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">notes</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-            <span class="hljs-string">"string"</span>,
-            <span class="hljs-string">"null"</span>
-          ]
-        </span>}</span>,
-        "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                    "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}</span>,
-                    "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}
-                  </span>}
-                </span>}</span>,
-                "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-                </span>}
-              </span>}
-            </span>}</span>,
-            "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                    "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}</span>,
-                    "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}
-                  </span>}
-                </span>}</span>,
-                "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-                </span>}
-              </span>}
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"List of items to be delivered"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">purchased</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client has already paid"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">payment</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client have to pay directly to the driver"</span>
-            </span>}
-          </span>}
+        "<span class="hljs-attribute">steps</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
         </span>}
       </span>}
     </span>}</span>,
@@ -1637,41 +1081,46 @@
       "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
       "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span>
     </span>}</span>,
-    "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"2"</span></span>,
-      "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
-      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
-      "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
-    "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
-    "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span></span>,
-    "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+    "<span class="hljs-attribute">steps</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"dropoff"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+          "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"1-433-198-2383"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Ms. Charles Herzog"</span></span>,
+          "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
-      </span>}</span>,
-      "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">52.212321</span></span>,
+          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">71.872433</span></span>,
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"61459 Wiza Common"</span></span>,
+          "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">"7th Floor, Apt. 708"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"pickup"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+          "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
+          "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"Joe's Pizza"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
+          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span></span>,
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords"</span></span>,
+          "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">""</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Get the order from Joe's pizza"</span>
       </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">items</span>": <span class="hljs-value">[
-        {
-          "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"iPhone 7, 64GB, black"</span></span>,
-          "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-number">1100</span>
-        </span>}
-      ]</span>,
-      "<span class="hljs-attribute">purchased</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-      "<span class="hljs-attribute">payment</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
-    </span>}
+    ]
   </span>}</span>,
   "<span class="hljs-attribute">driver</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
@@ -1723,94 +1172,8 @@
             </span>}
           </span>}
         </span>}</span>,
-        "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">notes</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-            <span class="hljs-string">"string"</span>,
-            <span class="hljs-string">"null"</span>
-          ]
-        </span>}</span>,
-        "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                    "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}</span>,
-                    "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}
-                  </span>}
-                </span>}</span>,
-                "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-                </span>}
-              </span>}
-            </span>}</span>,
-            "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                    "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}</span>,
-                    "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}
-                  </span>}
-                </span>}</span>,
-                "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-                </span>}
-              </span>}
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"List of items to be delivered"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">purchased</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client has already paid"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">payment</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client have to pay directly to the driver"</span>
-            </span>}
-          </span>}
+        "<span class="hljs-attribute">steps</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
         </span>}
       </span>}
     </span>}</span>,
@@ -1953,41 +1316,46 @@
       "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
       "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span>
     </span>}</span>,
-    "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"2"</span></span>,
-      "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
-      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
-      "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
-    "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
-    "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span></span>,
-    "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+    "<span class="hljs-attribute">steps</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"dropoff"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+          "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"1-433-198-2383"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Ms. Charles Herzog"</span></span>,
+          "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
-      </span>}</span>,
-      "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">52.212321</span></span>,
+          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">71.872433</span></span>,
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"61459 Wiza Common"</span></span>,
+          "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">"7th Floor, Apt. 708"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"pickup"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+          "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
+          "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"Joe's Pizza"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
+          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span></span>,
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords"</span></span>,
+          "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">""</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Get the order from Joe's pizza"</span>
       </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">items</span>": <span class="hljs-value">[
-        {
-          "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"iPhone 7, 64GB, black"</span></span>,
-          "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-number">1100</span>
-        </span>}
-      ]</span>,
-      "<span class="hljs-attribute">purchased</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-      "<span class="hljs-attribute">payment</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
-    </span>}
+    ]
   </span>}</span>,
   "<span class="hljs-attribute">driver</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
@@ -2040,94 +1408,8 @@
             </span>}
           </span>}
         </span>}</span>,
-        "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">notes</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-            <span class="hljs-string">"string"</span>,
-            <span class="hljs-string">"null"</span>
-          ]
-        </span>}</span>,
-        "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                    "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}</span>,
-                    "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}
-                  </span>}
-                </span>}</span>,
-                "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-                </span>}
-              </span>}
-            </span>}</span>,
-            "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                    "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}</span>,
-                    "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}
-                  </span>}
-                </span>}</span>,
-                "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-                </span>}
-              </span>}
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"List of items to be delivered"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">purchased</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client has already paid"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">payment</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client have to pay directly to the driver"</span>
-            </span>}
-          </span>}
+        "<span class="hljs-attribute">steps</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
         </span>}
       </span>}
     </span>}</span>,
@@ -2253,41 +1535,46 @@
       "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
       "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span>
     </span>}</span>,
-    "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"2"</span></span>,
-      "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
-      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
-      "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
-    "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
-    "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span></span>,
-    "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+    "<span class="hljs-attribute">steps</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"dropoff"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+          "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"1-433-198-2383"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Ms. Charles Herzog"</span></span>,
+          "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
-      </span>}</span>,
-      "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">52.212321</span></span>,
+          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">71.872433</span></span>,
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"61459 Wiza Common"</span></span>,
+          "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">"7th Floor, Apt. 708"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"pickup"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+          "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
+          "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"Joe's Pizza"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
+          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span></span>,
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords"</span></span>,
+          "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">""</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Get the order from Joe's pizza"</span>
       </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">items</span>": <span class="hljs-value">[
-        {
-          "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"iPhone 7, 64GB, black"</span></span>,
-          "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-number">1100</span>
-        </span>}
-      ]</span>,
-      "<span class="hljs-attribute">purchased</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-      "<span class="hljs-attribute">payment</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
-    </span>}
+    ]
   </span>}</span>,
   "<span class="hljs-attribute">driver</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
@@ -2339,94 +1626,8 @@
             </span>}
           </span>}
         </span>}</span>,
-        "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">notes</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-            <span class="hljs-string">"string"</span>,
-            <span class="hljs-string">"null"</span>
-          ]
-        </span>}</span>,
-        "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                    "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}</span>,
-                    "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}
-                  </span>}
-                </span>}</span>,
-                "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-                </span>}
-              </span>}
-            </span>}</span>,
-            "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                    "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}</span>,
-                    "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}
-                  </span>}
-                </span>}</span>,
-                "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-                </span>}
-              </span>}
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"List of items to be delivered"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">purchased</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client has already paid"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">payment</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client have to pay directly to the driver"</span>
-            </span>}
-          </span>}
+        "<span class="hljs-attribute">steps</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
         </span>}
       </span>}
     </span>}</span>,
@@ -2568,41 +1769,46 @@
       "<span class="hljs-attribute">first_name</span>": <span class="hljs-value"><span class="hljs-string">"Hoyt"</span></span>,
       "<span class="hljs-attribute">last_name</span>": <span class="hljs-value"><span class="hljs-string">"Grimes"</span>
     </span>}</span>,
-    "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"2"</span></span>,
-      "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
-      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
-      "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
-    "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
-    "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span></span>,
-    "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+    "<span class="hljs-attribute">steps</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"dropoff"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+          "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"1-433-198-2383"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Ms. Charles Herzog"</span></span>,
+          "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"VIP client"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
-      </span>}</span>,
-      "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
-          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span>
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">52.212321</span></span>,
+          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">71.872433</span></span>,
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"61459 Wiza Common"</span></span>,
+          "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">"7th Floor, Apt. 708"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords Suite 239"</span>
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T19:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are."</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"pickup"</span></span>,
+        "<span class="hljs-attribute">contact</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+          "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"470.408.0187"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"John Smith"</span></span>,
+          "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"Joe's Pizza"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+          "<span class="hljs-attribute">latitude</span>": <span class="hljs-value"><span class="hljs-number">55.449667</span></span>,
+          "<span class="hljs-attribute">longitude</span>": <span class="hljs-value"><span class="hljs-number">73.80401</span></span>,
+          "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"1239 Bartoletti Fords"</span></span>,
+          "<span class="hljs-attribute">indoor</span>": <span class="hljs-value"><span class="hljs-string">""</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">arrive_by</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T18:00Z"</span></span>,
+        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value"><span class="hljs-string">"Get the order from Joe's pizza"</span>
       </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">items</span>": <span class="hljs-value">[
-        {
-          "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"iPhone 7, 64GB, black"</span></span>,
-          "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-number">1100</span>
-        </span>}
-      ]</span>,
-      "<span class="hljs-attribute">purchased</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-      "<span class="hljs-attribute">payment</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
-    </span>}
+    ]
   </span>}</span>,
   "<span class="hljs-attribute">driver</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
@@ -2654,94 +1860,8 @@
             </span>}
           </span>}
         </span>}</span>,
-        "<span class="hljs-attribute">recipient</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">phone</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">notes</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">pickup_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-            <span class="hljs-string">"string"</span>,
-            <span class="hljs-string">"null"</span>
-          ]
-        </span>}</span>,
-        "<span class="hljs-attribute">deliver_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">instructions</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">route</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">destination</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                    "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}</span>,
-                    "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}
-                  </span>}
-                </span>}</span>,
-                "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-                </span>}
-              </span>}
-            </span>}</span>,
-            "<span class="hljs-attribute">pickup</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">coordinates</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-                    "<span class="hljs-attribute">latitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}</span>,
-                    "<span class="hljs-attribute">longitude</span>": <span class="hljs-value">{
-                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span>
-                    </span>}
-                  </span>}
-                </span>}</span>,
-                "<span class="hljs-attribute">address</span>": <span class="hljs-value">{
-                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-                </span>}
-              </span>}
-            </span>}
-          </span>}
-        </span>}</span>,
-        "<span class="hljs-attribute">order</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"List of items to be delivered"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">purchased</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client has already paid"</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">payment</span>": <span class="hljs-value">{
-              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"boolean"</span></span>,
-              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Client have to pay directly to the driver"</span>
-            </span>}
-          </span>}
+        "<span class="hljs-attribute">steps</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
         </span>}
       </span>}
     </span>}</span>,
@@ -3198,7 +2318,7 @@
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
     </span>}
   </span>}
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 10 Nov 2016</p><script>/* eslint-env browser */
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 14 Nov 2016</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 

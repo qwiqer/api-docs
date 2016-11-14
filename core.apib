@@ -67,25 +67,15 @@ Returns all active deliveries.
 ### Create Delivery [POST]
 Creates a delivery.
 
-+ Request with recipient_id (application/json)
++ Request (application/json)
     + Attributes
       + delivery
-          + recipient_id: `2` (number)
-          + pickup_at: `2016-01-01T18:00Z` (string, nullable)
-          + deliver_at: `2016-01-01T19:00Z` (string)
-          + instructions: `Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are.` (string)
-          + route (Route)
-          + order (Order)
+          + steps (array[PickupParams, DropOffParams])
 
-+ Request with recipient data (application/json)
++ Request with ids (application/json)
     + Attributes
       + delivery
-          + recipient (RecipientParams)
-          + pickup_at: `2016-01-01T18:00Z` (string, nullable)
-          + deliver_at: `2016-01-01T19:00Z` (string)
-          + instructions: `Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are.` (string)
-          + route (Route)
-          + order (Order)
+          + steps (array[PickupWithIds, DropOffWithIds])
 
 + Response 201 (application/json; charset=utf-8)
     + Attributes
@@ -378,12 +368,85 @@ Returns a driver.
 
 ## Delivery
 + manager (Manager)
-+ recipient (Recipient)
-+ pickup_at: `2016-01-01T18:00Z` (string, nullable)
-+ deliver_at: `2016-01-01T19:00Z` (string)
++ steps (array[DropOff, Pickup])
+
+## DropOff
++ id: `1` (number)
++ type: `dropoff`
++ contact
+  + id: `4` (number)
+  + Include DropOffContact
++ address
+  + id: `4` (number)
+  + Include DroppOffAddress
++ arrive_by: `2016-01-01T19:00Z` (string)
 + instructions: `Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are.` (string)
-+ route (Route)
-+ order (Order)
+
+## Pickup
++ id: `2` (number)
++ type: `pickup` (string)
++ contact
+  + id: `2` (number)
+  + Include Contact
++ address
+  + id: `2` (number)
+  + Include Address
++ arrive_by: `2016-01-01T18:00Z` (string)
++ instructions: `Get the order from Joe's pizza` (string)
+
+## DropOffParams
++ type: `dropoff`
++ contact (DropOffContact)
++ address (DroppOffAddress)
++ arrive_by: `2016-01-01T19:00Z` (string)
++ instructions: `Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are.` (string)
+
+## DropOffWithIds
++ type: `dropoff`
++ contact
+  + id: `3` (number)
++ address
+  + id: `5` (number)
++ arrive_by: `2016-01-01T19:00Z` (string)
++ instructions: `Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are.` (string)
+
+## PickupParams
++ type: `pickup`
++ contact (Contact)
++ address (Address)
++ arrive_by: `2016-01-01T18:00Z` (string)
++ instructions: `Get the order from Joe's pizza` (string)
+
+## PickupWithIds
++ type: `pickup`
++ contact
+  + id: `3` (number)
++ address
+  + id: `5` (number)
++ arrive_by: `2016-01-01T18:00Z` (string)
++ instructions: `Please ring bell and wait, I am slow to answering the door. If I don’t answer within a few minutes the keysafe number is 9018. Please enter and announce loudly who you are.` (string)
+
+## DropOffContact
++ phone: `1-433-198-2383` (string)
++ name: `Ms. Charles Herzog` (string)
++ notes: `VIP client` (string, optional)
+
+## Contact
++ phone: `470.408.0187` (string)
++ name: `John Smith` (string)
++ notes: `Joe's Pizza` (string, optional)
+
+## DroppOffAddress
++ latitude: 52.212321 (number, optional)
++ longitude: 71.872433 (number, optional)
++ address: `61459 Wiza Common` (string)
++ indoor: `7th Floor, Apt. 708` (string)
+
+## Address
++ latitude: 55.449667 (number, optional)
++ longitude: 73.804010 (number, optional)
++ address: `1239 Bartoletti Fords` (string)
++ indoor: ` ` (string, optional)
 
 ## Route
 + destination (RoutePoint)

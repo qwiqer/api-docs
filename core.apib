@@ -143,7 +143,7 @@ Returns all active jobs.
             Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0NzYzNzg1NzIsInN1YiI6MX0.5MuPNzEz9EpbZlGTOPYB99lRqjj1PubmyqvmH8hYggI
 
 + Response 200 (application/json; charset=utf-8)
-    + Attributes (array[AcceptedJob])
+    + Attributes (array[SignedJob, AcceptedJob])
 
 ## Job [/jobs/{id}]
 
@@ -156,7 +156,7 @@ Returns Job.
 + Response 200 (application/json; charset=utf-8)
     + Attributes
       + id: `1` (string)
-      + Include CancelledJob
+      + Include SignedJob
 
 ## /jobs/{id}/accept
 
@@ -478,7 +478,7 @@ Returns a driver.
 + reason_cancel (CancelReason, nullable)
 + notes: `My car is broken` (string, nullable)
 
-## AcceptedJob (Job)
+## AcceptedJob 
 + Include Job
 + signature_file (object, nullable)
 + photos (array, nullable)
@@ -490,7 +490,7 @@ Returns a driver.
 + reason_cancel (string, nullable)
 + notes (string, nullable)
 
-## StartedJob (Job)
+## StartedJob
 + Include Job
 + signature_file (object, nullable)
 + photos (array, nullable)
@@ -502,7 +502,7 @@ Returns a driver.
 + reason_cancel (string, nullable)
 + notes (string, nullable)
 
-## CancelledJob (Job)
+## CancelledJob
 + Include Job
 + signature_file (object, nullable)
 + photos (array, nullable)
@@ -514,7 +514,7 @@ Returns a driver.
 + reason_cancel: `driver_fault` (CancelReason)
 + notes: `My car is broken` (string)
 
-## CompletedJob (Job)
+## CompletedJob
 + Include Job
 + signature_file (object, nullable)
 + photos (array, nullable)
@@ -526,7 +526,7 @@ Returns a driver.
 + reason_cancel (string, nullable)
 + notes (string, nullable)
 
-## SignedJob (Job)
+## SignedJob
 + Include Job
 + signature_file (object, nullable)
 + photos (array, nullable)

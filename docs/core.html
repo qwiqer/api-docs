@@ -702,24 +702,15 @@
     </span>}</span>,
     "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-string">"online"</span>
   </span>}</span>,
-  "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value">{
-    "<span class="hljs-attribute">filename</span>": <span class="hljs-value"><span class="hljs-string">"j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-    "<span class="hljs-attribute">url</span>": <span class="hljs-value"><span class="hljs-string">"https://cdn.qwiqer.com/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-    "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span>
-  </span>}</span>,
-  "<span class="hljs-attribute">photos</span>": <span class="hljs-value">[
-    {
-      "<span class="hljs-attribute">filename</span>": <span class="hljs-value"><span class="hljs-string">"j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-      "<span class="hljs-attribute">url</span>": <span class="hljs-value"><span class="hljs-string">"https://cdn.qwiqer.com/signatures/j_f2b337f8-55db-40f9-b052-ce8210cac868.png"</span></span>,
-      "<span class="hljs-attribute">created_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span>
-    </span>}
-  ]</span>,
-  "<span class="hljs-attribute">accepted_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">started_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">cancelled_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">completed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
-  "<span class="hljs-attribute">signed_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
   "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value"><span class="hljs-string">"driver_fault"</span></span>,
+  "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">photos</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">accepted_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:01:23Z"</span></span>,
+  "<span class="hljs-attribute">started_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:10:23Z"</span></span>,
+  "<span class="hljs-attribute">cancelled_at</span>": <span class="hljs-value"><span class="hljs-string">"2016-01-01T15:30:23Z"</span></span>,
+  "<span class="hljs-attribute">completed_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">signed_at</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">reason_cancel: `driver_fault`</span>": <span class="hljs-value"><span class="hljs-string">"driver_fault"</span></span>,
   "<span class="hljs-attribute">notes</span>": <span class="hljs-value"><span class="hljs-string">"My car is broken"</span>
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
   "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
@@ -788,40 +779,35 @@
         </span>}
       </span>}
     </span>}</span>,
+    "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
+        <span class="hljs-string">"string"</span>,
+        <span class="hljs-string">"null"</span>
+      ]</span>,
+      "<span class="hljs-attribute">enum</span>": <span class="hljs-value">[
+        <span class="hljs-string">"driver_fault"</span>,
+        <span class="hljs-string">"recipient_fault"</span>,
+        <span class="hljs-string">"recipient_cancel"</span>
+      ]
+    </span>}</span>,
     "<span class="hljs-attribute">signature_file</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
-      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">filename</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">url</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">created_at</span>": <span class="hljs-value">{
-          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
-        </span>}
-      </span>}
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
+        <span class="hljs-string">"object"</span>,
+        <span class="hljs-string">"null"</span>
+      ]</span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{}
     </span>}</span>,
     "<span class="hljs-attribute">photos</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"null"</span>
     </span>}</span>,
     "<span class="hljs-attribute">accepted_at</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
-      ]
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
     </span>}</span>,
     "<span class="hljs-attribute">started_at</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
-      ]
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
     </span>}</span>,
     "<span class="hljs-attribute">cancelled_at</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
-      ]
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
     </span>}</span>,
     "<span class="hljs-attribute">completed_at</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
@@ -835,11 +821,8 @@
         <span class="hljs-string">"null"</span>
       ]
     </span>}</span>,
-    "<span class="hljs-attribute">reason_cancel</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
-      ]</span>,
+    "<span class="hljs-attribute">reason_cancel: `driver_fault`</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
       "<span class="hljs-attribute">enum</span>": <span class="hljs-value">[
         <span class="hljs-string">"driver_fault"</span>,
         <span class="hljs-string">"recipient_fault"</span>,
@@ -847,10 +830,7 @@
       ]
     </span>}</span>,
     "<span class="hljs-attribute">notes</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value">[
-        <span class="hljs-string">"string"</span>,
-        <span class="hljs-string">"null"</span>
-      ]
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span>
     </span>}
   </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="jobs-" class="resource"><h3 class="resource-heading">Accept a job <a href="#jobs-" class="permalink">&nbsp;&para;</a></h3><div id="jobs-post" class="action post"><h4 class="action-heading"><div class="name">Accept a job</div><a href="#jobs-post" class="method post">POST</a><code class="uri">/jobs/{id}/accept</code></h4><p>Driver accepts a job.</p>

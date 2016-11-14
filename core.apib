@@ -143,7 +143,7 @@ Returns all active jobs.
             Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0NzYzNzg1NzIsInN1YiI6MX0.5MuPNzEz9EpbZlGTOPYB99lRqjj1PubmyqvmH8hYggI
 
 + Response 200 (application/json; charset=utf-8)
-    + Attributes (array[Job])
+    + Attributes (array[AcceptedJob])
 
 ## Job [/jobs/{id}]
 
@@ -156,7 +156,7 @@ Returns Job.
 + Response 200 (application/json; charset=utf-8)
     + Attributes
       + id: `1` (string)
-      + Include Job
+      + Include CancelledJob
 
 ## /jobs/{id}/accept
 
